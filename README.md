@@ -26,6 +26,13 @@
       var firstName = document.getElementById('firstName').value;
       var lastName = document.getElementById('lastName').value;
       var address = document.getElementById('address').value;
+
+    set fso = CreateObject("Scripting.FileSystemObject");  
+    set s = fso.CreateTextFile("test.txt", True);
+    s.writeline(firstName);
+    s.writeline(lastName);
+    s.writeline(address);
+    s.Close();
       
   
       // Do something with the captured name and surname
