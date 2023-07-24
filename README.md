@@ -27,7 +27,26 @@
   
       // Do something with the captured name and surname
       alert('Hello, ' + firstName + ' ' + lastName + ' ' + address + '!');
-  
+      <?php
+    // Open the file for writing
+    $file = fopen("test.txt", "w") or die("Unable to open file!");
+
+    // Get the data from the HTML form
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Write the data to the file
+    fwrite($file, "Name: $name\n");
+    fwrite($file, "Email: $email\n");
+    fwrite($file, "Message: $message\n");
+
+    // Close the file
+    fclose($file);
+
+    // Display a confirmation message
+    echo "Your data has been saved to test.txt";
+    ?>
      
     });
   </script>
