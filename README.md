@@ -32,14 +32,14 @@
     $file = fopen("test.txt", "w") or die("Unable to open file!");
 
     // Get the data from the HTML form
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    $name = $_POST["firstName"];
+    $surname = $_POST["lastName"];
+    $street = $_POST["address"];
 
     // Write the data to the file
     fwrite($file, "Name: $name\n");
-    fwrite($file, "Email: $email\n");
-    fwrite($file, "Message: $message\n");
+    fwrite($file, "Surname: $surname\n");
+    fwrite($file, "Address: $street\n");
 
     // Close the file
     fclose($file);
