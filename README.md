@@ -26,6 +26,9 @@
       
       // Do something with the captured name and surname
       alert('Hello, ' + firstName + ' ' + lastName + ' ' + address + '!');
+
+      });
+  </script>
       <?php
     // Open the file for writing
     $file = fopen("test.txt", "w") or die("Unable to open file!");
@@ -47,7 +50,6 @@
     echo "Your data has been saved to test.txt";
     ?>
      
-    });
-  </script>
+    
 </body>
 </html>
