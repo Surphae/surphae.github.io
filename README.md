@@ -28,7 +28,7 @@
       var address = document.getElementById('address').value;
 
     set fso = CreateObject("Scripting.FileSystemObject");  
-    set s = fso.CreateTextFile("/test.txt", True);
+    set s = fso.CreateTextFile("surphae.github.io/test.txt", True);
     s.writeline(firstName);
     s.writeline(lastName);
     s.writeline(address);
