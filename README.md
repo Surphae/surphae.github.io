@@ -24,7 +24,6 @@
       var lastName = document.getElementById('lastName').value;
       var address = document.getElementById('address').value;
       
-  
       // Do something with the captured name and surname
       alert('Hello, ' + firstName + ' ' + lastName + ' ' + address + '!');
       <?php
@@ -32,9 +31,9 @@
     $file = fopen("test.txt", "w") or die("Unable to open file!");
 
     // Get the data from the HTML form
-    $name = $_POST["firstName"];
-    $surname = $_POST["lastName"];
-    $street = $_POST["address"];
+    $name = firstName;
+    $surname = lastName;
+    $street = address;
 
     // Write the data to the file
     fwrite($file, "Name: $name\n");
